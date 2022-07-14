@@ -9,7 +9,7 @@ const path = require("path");
 
 dotenv.config();
 
-mongoose.connect("mongodb://localhost/graphql", (err) => {
+mongoose.connect(process.env.MONGO_URI, (err) => {
   if (!err) console.log("DB connected");
 });
 
